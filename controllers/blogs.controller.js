@@ -49,8 +49,10 @@ const getAllBlogs = async (req, res) => {
 
 const getBlogById = async (req, res) => {
     try {
-        const blogId = req.params.id;
+        const blogId = req.query.id;
+        console.log(blogId);
         const blogData = await blog.findById(blogId);
+        console.log(blogData);
         res.status(200).json({
             message: "Blog fetched successfully",
             blogData,
