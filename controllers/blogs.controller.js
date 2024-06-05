@@ -50,10 +50,10 @@ const getAllBlogs = async (req, res) => {
 const getBlogById = async (req, res) => {
     try {
         const blogId = req.params.id;
-        const blog = await blog.findById(blogId);
+        const blogData = await blog.findById(blogId);
         res.status(200).json({
             message: "Blog fetched successfully",
-            blog,
+            blogData,
         });
     } catch (error) {
         res.status(500).json({
