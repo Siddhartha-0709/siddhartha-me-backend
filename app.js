@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import blogRouter from "./routes/blogs.routes.js";
 import userRouter from "./routes/user.routes.js";
+import todoRouter from "./routes/todo.routes.js";
 const app = express();
 
 app.use(express.json());
