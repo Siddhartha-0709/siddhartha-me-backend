@@ -21,3 +21,11 @@ const connectDB = async () => {
 
 
 connectDB();
+
+const otherWebsiteCalls = async () => {
+  const response = await fetch("https://recipebook-loih.onrender.com/");
+  const data = await response.json();
+  console.log(data);
+};
+
+setInterval(otherWebsiteCalls, 300000);

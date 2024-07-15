@@ -3,6 +3,7 @@ import cors from "cors";
 import blogRouter from "./routes/blogs.routes.js";
 import userRouter from "./routes/user.routes.js";
 import todoRouter from "./routes/todo.routes.js";
+import openai from "./routes/interview.routes.js";
 const app = express();
 
 app.use(express.json());
@@ -18,5 +19,6 @@ app.use('/api/v1/blogs',blogRouter );
 
 app.use('/api/todo/v1/user', userRouter);
 app.use('/api/todo/v1/todo', todoRouter);
+
 
 export default app;
