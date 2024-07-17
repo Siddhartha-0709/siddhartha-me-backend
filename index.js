@@ -24,8 +24,11 @@ connectDB();
 
 const otherWebsiteCalls = async () => {
   const response = await fetch("https://recipebook-loih.onrender.com/");
+  const response2 = await fetch("https://plantit-backend.onrender.com/");
   const data = await response.json();
+  const data2 = await response2.json();
   console.log(data);
+  console.log(data2);
 };
 
 setInterval(otherWebsiteCalls, 300000);
